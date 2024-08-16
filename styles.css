@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+.site-container{
+    width: 90vw;
+    margin: auto;
+
+}
+
+.list-items img{
+    width: 1.5rem;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.nav-bar .nav-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+
+.nav-list .list-items{
+    margin: 0rem 2rem;
+
+}
+
+
+.list-items a{
+    text-decoration: none;
+    color: black;
+}
+.site-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.grid-item{
+    position: relative;
+}
+
+.grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-item p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.grid-item p:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.grid-container{
+    margin-top: 4rem;
+    display: grid;
+    width: 100%;
+    gap: 16px;
+    grid-template-areas:
+    "eth eth alphabet"
+    "eth eth traveler"
+    "astro cube traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dimensional"
+    "foam foam dimensional";
+}
+
+#eth{
+    grid-area:eth ;
+}
+#alphabet{
+    grid-area:aplhabet ;
+}
+#traveler{
+    grid-area:traveler ;
+}
+#astro{
+    grid-area:astro ;
+}
+#cube{
+    grid-area: cube;
+}
+#cup{
+    grid-area:cup ;
+}
+#insta{
+    grid-area:insta ;
+}
+#foam{
+    grid-area:foam ;
+}
+#dimensional{
+    grid-area:dimensional ;
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+.hamburger-btn{
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.hamburger-btn .lines{
+    width: 80%;
+    height: 5px;
+    background-color: black;
+    
+}
+
+
+
+
+@media only screen and (max-width:1100px){
+    .grid-container{
+        grid-template-areas: 
+        "eth eth"
+        "eth eth"
+        "alphabet traveler"
+        "astro cube"
+        "astro cube"
+        "insta insta"
+        "insta insta"
+        "cup foam"
+        "dimensional dimensional"
+        "dimensional dimensional";
+    }
+}
+
+@media only screen and (max-width:765px){
+    .grid-container{
+        grid-template-areas: 
+        "eth"
+        "alphabet"
+        "traveler"
+        "astro"
+        "cube"
+        "insta"
+        "cup"
+        "foam"
+        "dimensional";
+    }
+
+    .nav-bar .nav-list{
+        display: none;
+    }
+
+    .hamburger-btn{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+}
