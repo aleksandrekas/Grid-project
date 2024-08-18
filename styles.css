@@ -124,12 +124,21 @@ body{
 
 
 footer{
-    width: 100vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
+
+
+footer p{
+    text-align: center;
+}
+
+
 
 .hamburger-btn{
     display: none;
