@@ -43,10 +43,11 @@ body{
     text-decoration: none;
     color: black;
 }
+
 .list-items a:hover{
-   border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
-}
+
 
 .site-title{
     font-size: 2rem;
@@ -152,12 +153,69 @@ footer p{
     cursor: pointer;
 }
 
-.hamburger-btn .lines{
-    width: 80%;
+.hamburger-btn .lines1,.lines2,.lines3{
+    width: 100%;
     height: 5px;
     background-color: black;
+    border-radius: 3px;
     
 }
+
+
+.top{
+    animation: rotate 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.mid{
+    animation: shrink 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.bot{
+    animation: rotate-reverse 1.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.mobile-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    right: -100px;
+    top: 100px;
+    background-color: white;
+    transition: 1s ease-in-out;
+    /* transform: translateX(100%); */
+}
+
+
+
+.show{
+    right: 0px;
+    transition: 1s ease-in-out;
+    
+}
+
+
+.mobile-list img{
+    width: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.mobile-list a{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
 
 
 
@@ -176,6 +234,10 @@ footer p{
         "dimensional dimensional"
         "dimensional dimensional";
     }
+
+    .nav-bar{
+       margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width:765px){
@@ -190,6 +252,20 @@ footer p{
         "cup"
         "foam"
         "dimensional";
+        margin-top: 150px;
+    }
+
+    .nav-bar{
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        width: 100vw;
+        margin-top: 0;
+        padding: 1rem;
+        padding-right: 4rem;
+        padding-top: 2rem;
+        height: 100px;
     }
 
     .nav-bar .nav-list{
@@ -203,3 +279,45 @@ footer p{
         flex-direction: column;
     }
 }
+
+
+
+
+
+
+
+/* Keyframes ------------------------------------------------- */
+
+@keyframes shrink{
+    from{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    to{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{       
+        transform: rotate(45deg) translate(10px,9px);
+    }
+}
+
+@keyframes rotate-reverse{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-45deg) translate(10px,-9px);
+    }
+}
+
+
+
+
